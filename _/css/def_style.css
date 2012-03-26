@@ -1,0 +1,353 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+NAV UL
+{
+	list-style: none;
+}
+BLOCKQUOTE, Q
+{
+	quotes: none;
+}
+BLOCKQUOTE:before, BLOCKQUOTE:after, Q:before, Q:after
+{
+	content: '';
+	content: none;
+}
+A
+{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+INS
+{
+	background-color: #FF9;
+	color: #000;
+	text-decoration: none;
+}
+MARK
+{
+	background-color: #FF9;
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
+}
+DEL
+{
+	text-decoration: line-through;
+}
+ABBR[title], DFN[title]
+{
+	border-bottom: 1px dotted #000000;
+	cursor: help;
+}
+/*tables still need cellspacing="0" in the markup*/
+TABLE
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+HR
+{
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #CCC;
+	margin: 0.5em 0;
+	padding: 0;
+}
+INPUT, SELECT
+{
+	vertical-align: middle;
+}
+/*Mobile phones will adjust text size when the screen orientation changes unless you include a special CSS parameter*/
+HTML
+{
+	-webkit-text-size-adjust: none;
+/*-ms-text-size-adjust: none*/
+}
+/*END RESET CSS
+fonts.css from the YUI Library: developer.yahoo.com/yui/
+Refer to developer.yahoo.com/yui/3/cssfonts/ for font sizing percentages
+
+There are three custom edits:
+* remove arial, helvetica from explicit font stack
+* we normalize monospace styles ourselves
+* table font-size is reset in the HTML5 reset above so there is no need to repeat
+*/
+BODY
+{
+	font: 13px/1.231 sans-serif;
+	font-size: small;
+}
+/*hack retained to preserve specificity*/
+SELECT, INPUT, TEXTAREA, BUTTON
+{
+	font: 99% sans-serif;
+}
+/*normalize monospace sizing
+* en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome
+ */
+PRE, CODE, KBD, SAMP
+{
+	font-family: monospace, sans-serif;
+}
+/**
+* Minimal base styles.
+ 
+Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test*/
+A:hover, A:active
+{
+	outline: none;
+}
+UL, OL
+{
+	margin-left: 2em;
+}
+OL
+{
+	list-style-type: decimal;
+}
+/*Remove margins for navigation lists*/
+NAV UL, NAV LI
+{
+	margin: 0;
+	list-style: none;
+	list-style-image: none;
+}
+SMALL
+{
+	font-size: 85%;
+}
+STRONG, TH
+{
+	font-weight: bold;
+}
+TD
+{
+	vertical-align: top;
+}
+/*Set sub, sup without affecting line-height: gist.github.com/413930*/
+SUB, SUP
+{
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+}
+SUP
+{
+	top: -0.5em;
+}
+SUB
+{
+	bottom: -0.25em;
+}
+PRE
+{
+/*www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/*/
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	padding: 15px;
+}
+TEXTAREA
+{
+	overflow: auto;
+}
+/*www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/*/
+.iem7 LEGEND
+{
+	margin-left: -7px;
+}
+/*Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css*/
+INPUT[type="radio"]
+{
+	vertical-align: text-bottom;
+}
+INPUT[type="checkbox"]
+{
+	vertical-align: bottom;
+}
+.iem7 INPUT[type="checkbox"]
+{
+	vertical-align: baseline;
+}
+/*Hand cursor on clickable input elements*/
+LABEL, INPUT[type="button"], INPUT[type="submit"], INPUT[type="image"], BUTTON
+{
+	cursor: pointer;
+}
+/*Webkit browsers add a 2px margin outside the chrome of form elements*/
+BUTTON, INPUT, SELECT, TEXTAREA
+{
+	margin: 0;
+}
+/*Colors for form validity*/
+INPUT:valid, TEXTAREA:valid
+{
+}
+INPUT:invalid, TEXTAREA:invalid
+{
+	border-radius: 1px;
+/*-moz-box-shadow: 0px 0px 5px red*/
+	-webkit-box-shadow: 0px 0px 5px #FF0000;
+/*box-shadow: 0px 0px 5px red*/
+}
+.no-boxshadow INPUT:invalid, .no-boxshadow TEXTAREA:invalid
+{
+	background-color: #F0DDDD;
+}
+/*These selection declarations have to be separate
+No text-shadow: twitter.com/miketaylr/status/12228805301
+Also: hot pink!*/
+::-moz-selection
+{
+	background: #FF5E99;
+	color: #FFF;
+	text-shadow: none;
+}
+::selection
+{
+	background: #FF5E99;
+	color: #FFF;
+	text-shadow: none;
+}
+/*j.mp/webkit-tap-highlight-color*/
+A:link
+{
+	-webkit-tap-highlight-color: #FFF;
+}
+/*Make buttons play nice in IE:
+www.viget.com/inspire/styling-the-button-element-in-internet-explorer/*/
+BUTTON
+{
+	width: auto;
+	overflow: visible;
+}
+/*Bicubic resizing for non-native sized IMG:
+code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/*/
+.iem7 IMG
+{
+	-ms-interpolation-mode: bicubic;
+}
+/**
+* You might tweak these..
+ */
+BODY, SELECT, INPUT, TEXTAREA
+{
+/*#444 looks better than black: twitter.com/H_FJ/statuses/11800719859*/
+	color: #444;
+/*Set your base font here, to apply evenly
+font-family: Georgia, serif;*/
+}
+/*Headers (h1, h2, etc) have no default font-size or margin; define those yourself*/
+H1, H2, H3, H4, H5, H6
+{
+	font-weight: bold;
+}
+A, A:active, A:visited
+{
+	color: #92050F;
+}
+/* 
+* Helper classes
+ 
+prevent callout*/
+.nocallout
+{
+/*-webkit-touch-callout: none*/
+}
+/*Text overflow with ellipsis*/
+.ellipsis
+{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+/*A hack for HTML5 contenteditable attribute on mobile*/
+TEXTAREA.contenteditable
+{
+	-webkit-appearance: none;
+}
+/*A workaround for S60 3.x and 5.0 devices which do not animated gif images if they have been set as display: none*/
+.gifhidden
+{
+	position: absolute;
+	left: -100%;
+}
+/*Primary Styles
+Author:
+*/
+BODY
+{
+	background: #E5E3E0;
+}
+P
+{
+	margin-bottom: 1.2em;
+}
+	
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 569px) {
+/* Styles */
+
+}
+ 
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) and (max-device-width: 569px) {
+/*Styles
+	.button.large
+	{
+		width: 440px;
+		display: inline-block;
+	}*/
+}
+ 
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) and (max-device-width: 320px) {
+/* Styles */
+
+}
+ 
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+ 
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+ 
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+ 
+/* iPhone 4 and high pixel ratio devices ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/*Styles*/
+
+}
+/*Smartphones (portrait) -----------
+Styles
+iPads (portrait and landscape) -----------
+Styles
+iPads (landscape) -----------
+Styles
+iPads (portrait) -----------
+Styles
+iPhone 4 and high pixel ratio devices -----------
+Styles*/
