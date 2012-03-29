@@ -9,7 +9,8 @@ var app = (function() {
 		var ix;
 		for( ix = begin; ix < end - 1; ++ix) {
 			if(array[ix] <= piv) {
-				array.swap(store, ix); ++store;
+				array.swap(store, ix);
+				++store;
 			}
 		}
 		array.swap(end - 1, store);
@@ -43,4 +44,21 @@ var app = (function() {
 	return {
 		sortArray : quick_sort
 	}
-})();
+})(); 
+
+(function($) {
+
+	var o = $({});
+
+	$.subscribe = function() {
+		o.bind.apply(o, arguments);
+	};
+
+	$.unsubscribe = function() {
+		o.unbind.apply(o, arguments);
+	};
+
+	$.publish = function() {
+		o.trigger.apply(o, arguments);
+	};
+})(jQuery);
